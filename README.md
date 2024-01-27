@@ -1,3 +1,3 @@
-# Goodbye Unnecessary Buttons
+# Goodbye Necessary Buttons
 
-Removes The Versus, Map and Event buttons from CreatorLayer!
+Removes featured, gauntlets, map packs, and stuff
