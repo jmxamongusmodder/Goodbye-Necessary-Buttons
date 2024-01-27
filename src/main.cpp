@@ -8,9 +8,10 @@ class $modify(CreatorLayer) {
 		if(!CreatorLayer::init())
 			return false;
 		CCMenu* m_creatorButtonsMenu = as<CCMenu*>(this->getChildByID("creator-buttons-menu"));
-		as<CCNode*>(m_creatorButtonsMenu->getChildByID("versus-button"))->removeFromParent();
-		as<CCNode*>(m_creatorButtonsMenu->getChildByID("map-button"))->removeFromParent();
-		as<CCNode*>(m_creatorButtonsMenu->getChildByID("event-button"))->removeFromParent();
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("featured-button"))->removeFromParent();
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("map-packs-button"))->removeFromParent();
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("gauntlets-button"))->removeFromParent();
+		as<CCNode*>(m_creatorButtonsMenu->getChildByID("lists-button"))->removeFromParent();
 
 		for(int i = 0; i < m_creatorButtonsMenu->getChildrenCount(); i++) {
 			log::info("{}", i);
@@ -21,13 +22,13 @@ class $modify(CreatorLayer) {
 			
 			sprite->setScale(0.85);
 
-			if(nodeID == "featured-button")
+			if(nodeID == "map-button")
 				node->setZOrder(-5);
 
-			if(nodeID == "lists-button")
+			if(nodeID == "gauntlets-button")
 				node->setZOrder(-4);
 
-			if(nodeID == "map-packs-button")
+			if(nodeID == "event-button")
 				node->setZOrder(-3);
 					
 			if(nodeID == "search-button")
